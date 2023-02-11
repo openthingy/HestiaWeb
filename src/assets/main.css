@@ -1,23 +1,13 @@
-@import "./base.css";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import './base.css';
 
 #app {
-  font-family: 'Roboto', sans-serif;
-  /*max-width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 
-  font-weight: normal;*/
-}
-
-body {
-  max-width: 100%;
-  margin: 0 auto;
-
   font-weight: normal;
 }
+
 a,
 .green {
   text-decoration: none;
@@ -38,6 +28,8 @@ a,
   }
 
   #app {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
   }
 }
