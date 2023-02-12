@@ -4,11 +4,27 @@ import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
 
+// Vuetify
+import 'vuetify/styles'
+import { createVuetify } from 'vuetify'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
+// CSS
 import './assets/main.css'
 
-const app = createApp(App)
+const vuetify = createVuetify({
+    theme: {
+        defaultTheme: 'light'
+      },
+    components,
+    directives,
+});
 
-app.use(createPinia())
-app.use(router)
+const app = createApp(App);
 
-app.mount('#app')
+app.use(vuetify);
+app.use(createPinia());
+app.use(router);
+
+app.mount('#app');
