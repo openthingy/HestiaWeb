@@ -4,7 +4,7 @@
 
 <template>
 <div class="d-flex justify-center align-center h-screen" >
- <v-card class="pa-16" width="50vw" max-width="750" title="Login">
+ <v-card class="pa-8" width="50vw" max-width="750" title="Login">
       <v-form
         v-model="form"
         @submit.prevent="onSubmit"
