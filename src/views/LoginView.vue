@@ -4,7 +4,7 @@
 
 <template>
 <div class="d-flex justify-center align-center h-screen" >
- <v-card class="pa-8" width="50vw" max-width="750" title="Login">
+ <v-card class="pa-8" width="40vw" title="Login">
       <v-form
         v-model="form"
         @submit.prevent="onSubmit"
@@ -12,7 +12,7 @@
         <v-text-field
           v-model="email"
           :readonly="loading"
-          :rules="[required]"
+          :rules="[required, checkEmailFormat]"
           class="mb-2"
           clearable
           label="Email"
@@ -24,6 +24,7 @@
           :rules="[required]"
           clearable
           label="Password"
+          type="password"
           placeholder="Enter your password"
         ></v-text-field>
 
@@ -64,6 +65,10 @@
       },
       required (v: string) {
         return !!v || 'Field is required'
+      },
+      checkEmailFormat (v: string) {
+        const emailRegex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(v) || "Email format incorrect";
       },
     },
   }

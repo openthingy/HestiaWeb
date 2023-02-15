@@ -15,7 +15,7 @@ import './assets/main.css'
 
 const vuetify = createVuetify({
     theme: {
-        defaultTheme: 'light'
+        defaultTheme: 'dark'
       },
     components,
     directives,
