@@ -32,6 +32,5 @@
         'Updates',
       ],
     }),
-    //
   }
 </script>
