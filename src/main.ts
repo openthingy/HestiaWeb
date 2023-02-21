@@ -12,6 +12,7 @@ import * as directives from 'vuetify/directives'
 
 // CSS
 import './assets/main.css'
+import '@mdi/font/css/materialdesignicons.css'
 
 const vuetify = createVuetify({
     theme: {
