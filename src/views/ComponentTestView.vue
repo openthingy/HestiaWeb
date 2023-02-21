@@ -4,6 +4,11 @@ import SideBar from "@/components/SideBar.vue";
 </script>
 
 <template>
-    <NavBar/>
     <SideBar/>
+    <NavBar/>
+    <v-main>
+        <p>
+            Hello world
+        </p>
+    </v-main>
 </template>
